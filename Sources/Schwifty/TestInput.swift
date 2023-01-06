@@ -13,7 +13,8 @@ import Foundation
 /// Current ``Schwifty`` version
 ///
 /// Major number should only change for first release or a major expansion in supported operators/functions. Minor number changes when default input updates to show new support. Revision changed when defualt input changes.
-public let Version = "0.1.1"
+/// **UPDATE:**Jump to 1.0.0 due to "SwiftScript 1.0.0" replacing SwiftyPi 0.7
+public let Version = "1.0.0"
 
 
 /// Test string.

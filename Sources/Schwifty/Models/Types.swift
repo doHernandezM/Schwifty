@@ -34,6 +34,7 @@ enum Types: String {
             return false
         }
     }
+    
     func isNumber() -> Bool {
         switch self {
         case .int, .double, .float, .bool:
@@ -82,6 +83,7 @@ enum Operators: String, CaseIterable {
     case multOp = "*"
     case divOp = "/"
     case remainderOp = "%"
+    case exponentiationOp = "^"
     
     ///AdditionPrecedence
     ///Left associative
