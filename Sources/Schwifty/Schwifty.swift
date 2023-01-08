@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreFoundation
 
 //let schwifty = Schwifty(isLight: false, highlightSyntax: true, string: nil)
 let kDebug = true
