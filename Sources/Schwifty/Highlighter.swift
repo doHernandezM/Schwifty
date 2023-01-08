@@ -7,6 +7,7 @@
 //
 
 import Foundation
+#if os(OSX) || os(iOS)
 #if os(OSX)
 import Cocoa
 
@@ -43,7 +44,7 @@ public class Highlighter: Codable {
     public init(compiler: Schwifty, rawString: String) {
         self.compiler = compiler
         self.attributedString = NSAttributedString(string: rawString)
-
+        
         let newAttributed = NSMutableAttributedString(string: "")
         
         
@@ -165,4 +166,4 @@ public class Highlighter: Codable {
     
 }
 
-//#endif
+#endif
