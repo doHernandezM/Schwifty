@@ -146,6 +146,7 @@ class Word: Codable {
         
         self.number = assignedNumber
         
+#if os(OSX) || os(iOS)
         let numberType = CFNumberGetType(number)
         
         switch numberType {
@@ -165,6 +166,19 @@ class Word: Codable {
         default:
             type = .error
         }
+#else
+        if number is Bool {
+            type = .bool
+        } else if number is Int {
+            type = .int
+        } else if number is Double {
+            type = .double
+        } else if isNumericType(number) {
+            type = .float
+        } else {
+            type = .error
+        }
+#endif
         
     }
     
