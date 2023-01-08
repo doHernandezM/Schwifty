@@ -167,6 +167,15 @@ class Word: Codable {
             type = .error
         }
 #else
+        func isNumericType<T>(_ value: T) -> Bool {
+            switch value {
+            case is Int, is Int8, is Int16, is Int32, is Int64, is UInt, is UInt8, is UInt16, is UInt32, is UInt64, is Float, is Double:
+                return true
+            default:
+                return false
+            }
+        }
+
         if number is Bool {
             type = .bool
         } else if number is Int {
