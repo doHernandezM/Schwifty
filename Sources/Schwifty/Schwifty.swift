@@ -73,8 +73,8 @@ public class Schwifty: Codable {
             if highlightSyntax && !lightCompile {
 #if os(OSX) || os(iOS)
                 syntaxHighlighter = Highlighter(compiler: self, rawString: codeString)
-#endif
                 self.attributedString = syntaxHighlighter?.attributedString
+#endif
             }
             
             //Update delegate here
